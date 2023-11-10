@@ -20,6 +20,6 @@ func main() {
     runtime.GC()
     var m runtime.MemStats
     runtime.ReadMemStats(&m)
-    fmt.Printf("Iter %8d: Alloc: %12d MiB, HeapAlloc: %12d MiB\n", i, m.Alloc / 1024 / 1024, m.HeapAlloc / 1024 / 1024)
+    fmt.Printf("Iter %8d: Alloc: %12d MiB, Sys: %12d MiB\n", i, m.Alloc / 1024 / 1024, m.Sys / 1024 / 1024)
   }
 }
